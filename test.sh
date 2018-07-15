@@ -36,5 +36,6 @@ python3 -m pip list
 # python3 -m pip install --no-cache-dir --upgrade --index-url https://test.pypi.org/simple/ rensha256
 # python3 -m pip --no-cache-dir install --index-url https://test.pypi.org/simple rensha256
 # python3 -m pip --no-cache-dir install --extra-index-url https://testpypi.python.org/pypi rensha256
-python3 -m pip --no-cache-dir install --extra-index-url https://testpypi.python.org/pypi rensha256
+# python3 -m pip --no-cache-dir install --extra-index-url https://testpypi.python.org/pypi rensha256
+python3 -m pip install rensha256
 python3 -m pip list

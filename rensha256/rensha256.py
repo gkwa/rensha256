@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__version__ = "0.1.74"
+__version__ = "0.1.75"
 
 from hashlib import sha256
 import sys
