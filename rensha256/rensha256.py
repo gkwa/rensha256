@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__version__ = "0.1.75"
+__version__ = "0.1.78"
 
 from hashlib import sha256
 import sys
@@ -26,9 +26,20 @@ def main():
     logger.addHandler(fh)
     logger.addHandler(ch)
 
-    filesList = [i.strip() for i in sys.stdin.readlines()]
+    fileList = []
 
-    for path in filesList:
+    # get file list from stdin if there are any
+    if not sys.stdin.isatty():
+        fileList = sys.stdin.readlines()
+
+    # get more file names that are arguments
+    fileList += sys.argv[1:]
+
+    fileList = [i.strip() for i in fileList]
+
+    logger.debug(f'file list: {",".join(fileList)}')
+
+    for path in fileList:
         original = pathlib.Path(path)
         original.resolve()
 
